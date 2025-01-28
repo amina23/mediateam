@@ -1,0 +1,11 @@
+framework:
+    validation:
+        enabled: true
+        mapping:
+            paths:
+                - '%kernel.project_dir%/src/validator'
+
+when@test:
+    framework:
+        validation:
+            not_compromised_password: false

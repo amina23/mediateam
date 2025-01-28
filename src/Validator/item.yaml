@@ -1,0 +1,13 @@
+App\DTO\ItemDTO:
+    properties:
+        title:
+            - NotBlank:
+                  message: "Le titre est obligatoire."
+        description:
+            - NotBlank:
+                  message: "La description est obligatoire."
+            - Length:
+                  min: 10
+                  max: 1000
+                  minMessage: "La description doit contenir au moins {{ limit }} caractères."
+                  maxMessage: "La description ne peut pas contenir plus de {{ limit }} caractères."                  
